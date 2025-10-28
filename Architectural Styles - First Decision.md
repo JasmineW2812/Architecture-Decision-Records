@@ -1,4 +1,4 @@
-# Using Layered Architecture
+# Using Layered Architecture | Date: 01/10/25
 
 ## Context and Problem Statement
 
@@ -16,22 +16,27 @@ The problem is choosing which architectural style would be most suited for meeti
 ## Decision Outcome
 
 I have chosen Layered architecture because it fits a majority of key requirements. For example, the division of layers helps to plan and design a modular system. This is important
-as the system is expected to provide a variety of functional requriements for a large user base. In addition to this a definitive feature of Layered Architecture is the seperation of Layers,
-this is beneficial as it helps us to understand where each functionality is taken place along with the isolaion of layers can keep data more secure which is important given there
-will likely be a lot of communication between consumer and support.
+as the system is expected to provide a variety of functional requirements for a large user base. In addition to this a key feature of Layered Architecture is the separation of Layers,
+this is beneficial as it helps us to understand where each functionality takes place. Combined with this the isolation of layers can keep data more secure which is important given there will likely be a lot of communication between consumer and support.
 
-It is also important to note when deciding this since this is my first choice, as recommended in [ ] this is a good option to starting point when still looking into requirements
-due to its simplicity and reliablity + structure. I still need to look into non-functional requirements and research more about the design (c4 diagrams) to know if this is the
-most optiomal design to help me create this.
+It is important to note when deciding that this it is my first choice. According to *Fundamentals of Software Architecture*  [Richard & Ford, 2020], Layered Architecture is a good option to starting point when still looking into requirements
+due to its simplicity and reliability and structured approach. I still need to look into non-functional requirements and research more about the design (c4 diagrams) to know if this is the most optimal choice to create the system.
 
-The main reason client server architercture would not be ideal is potential risks due to network dependency where poor connectivity can lead to performance issues which could
-risk non-functional requirments not being met. (e.g. availability)
+The main reason client server architecture would not be ideal is while it is simpler to implement and design as it is only two tiered, so it is not as modular or scalable for larger system. Furthermore, there could be future issues without separating component interactions.
 
-The issue with Generic Web Application is the lack of a clear structure which when creating a medium to large sized web-application can cause unexpected issues during development
-as a modular approach may not have been planned.
-
+The issue with Generic Web Application is the lack of separation of concerns so extending with future requirements of adding a chatbot could be more difficult due to a lack of modularity.
 
 ### Consequences
+**Positive**
+* Modular and reusable components
+* Improved data security through layer isolation
+* Easy to make a well-structured design
 
-* Good, because  Modular, Reusable, Ease of Maintenance, Isolation
-* Bad, because - More modular may be needed, Risk for sinkhole anti-pattern
+**Negative**
+* Risk for sinkhole anti-pattern e.g. too many layers can impact performance
+* Potentially further decomposition needed due to complexity
+
+### References
+Richards, M., & Ford, N. (2020). Fundamentals of software architecture : an engineering approach. O’reilly.
+
+‌
