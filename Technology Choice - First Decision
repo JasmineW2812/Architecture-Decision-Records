@@ -1,1 +1,35 @@
+# Using Laravel (PHP) to build the application| Date: 01/10/25
 
+## Context and Problem Statement
+We need to choose a backend framework to build the application following Layered Architecture. To support the
+architecture, it must allow for modular development, data isolation between layers and integration of multi-tenancy.
+
+The problem is choosing a backend which will integrate well with the designs (c4 created at a later date) and
+will likely meet all the requirements expected of the software.
+
+## Considered Options
+
+* Node.js 
+* Laravel (selected)
+* Django
+
+## Decision Outcome
+I have chosen Laravel for the backend as it supports modular development and follows MVC principles this is a vital part for
+implementing a layered architecture. In addition to this I have a lot of technical experience using Laravel in addition to
+using Laravel APIs such as an email connection which could drastically reduce development time and allow me to focus on making
+a reliable and high quality application.
+
+While Django may be more of a similar build to create classes using OOP but
+Node.js doesn't fit as well for the architecture
+
+### Consequences
+**Positive**
+* Modular
+* Data integrity
+* Most familiarity 
+**Negative**
+* Potentially harder to implement in some aspects
+* Not as much supportive documents as other frameworks
+* Less reliability it will be used regularly framework in the future if new ones come out or older more established
+
+### References
