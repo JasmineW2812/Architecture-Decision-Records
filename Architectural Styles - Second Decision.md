@@ -3,7 +3,7 @@
 ## Context and Problem Statement
 I am currently creating a container diagram and want to re-evaluate what architectural style I am using. This is because I have now looked further into non-functional requirements and have a better understanding
 of the system as a whole.
-The current architecture may not be optimal for the system I am creating. As mentioned in chapter 10 of *Fundamentals of Software Architecture* [Richard & Ford, 2020],  a key issue for Layered Architecture is the deployability and testability rate is very low e.g. 3 line code change requires entire deployment unit to be redeployed. This is not feasible for an application that needs to reliably handle communication of complaints between consumers and staff.
+The current architecture may not be optimal for the system I am creating. As mentioned in chapter 10 of *Fundamentals of Software Architecture* [Richard & Ford, 2020],  a key issue for Layered Architecture is the deployability and testability rating is very low e.g. 3 line code change requires entire deployment unit to be redeployed. This is not feasible for an application that needs to reliably handle communication of complaints between consumers and staff.
 
 The problem is we need to research to see if there is a more suitable option out there with the benefits provided from the layered architecture and solves the issues that have been discovered.
 
