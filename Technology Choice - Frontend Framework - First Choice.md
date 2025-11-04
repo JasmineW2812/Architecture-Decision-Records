@@ -1,41 +1,35 @@
-# Title Decision on Frontend Framework | Date: 30/10/25
+# Decision on Frontend Framework | Date: 30/10/25
 
 ## Context and Problem Statement
-Now I have selected a backend framework and reviewed functional and non-functional requirements, C4 diagrams, and UI design/libraries. 
-I need to compare and evaluate the use of a front-end framework to see if it will be beneficial and support Service-Oriented Architecture.
-However, it may not be necessary if the benefits are not significant, given that we need to prioritise the backend. Another consideration is the time required to develop the system.
+Having selected ASP.NET for the backend and have selected the system architecture to be Service-Oriented, I need to decide on a front-end approach. The CMS will handle complaints transactionally, where a consumer submits a complaint and a staff member responds. Real-time updates are not required, but the system must remain reliable, maintainable and scalable.
 
-The problem is to find out if a front-end framework would be useful enough for development or if it is better to not use one.
+The problem is to determine whether a front-end framework is necessary or if a simpler server-render approach would better meet the system requirements while allowing focus on the backend architecture.
 
 ## Considered Options
 
-* Razor Pages / MVC - No Front-End Framework (Selected)
+* Razor Pages / MVC (Selected)
 * Blazor
 * Vue.js
 
 ## Decision Outcome
-I have decided the best method given the situation is to use Razor Pages, because it requires fewer tools,
-which keeps the front-end simple and easier to maintain. This is important as the complexity will be focused on the backend,
-helping to keep the architecture clean and aligned with the C4 diagrams.
-Server-rendered pages will be enough for the complaint system, as communication will be handled transactionally rather than in real-time.
+I have decided the best method given the situation is to use Razor Pages / MVC, it provides a straigtforwad way to render pages directly from the server, this aligns with the transactional process that will be used in the system. Therefore, server-rendered pages are sufficient for complaint submission and response workflows without adding unncecessary complexity.
 
-Blazor would be more ideal if there was more time to develop the system, as it supports reusable components and scalable front-end architecture.
-However, for current development, it would be too complex to manage. This could be implemented in the future since the codebase is still in C#.
+Using Razor Pages also keeps the front-end coupled closely with ASP.NET backend which will simplify the integration of modular services. This will allow for rapid development and testing of the core functionality while maintaining a clean architecture.
 
-I would not use Vue.js for similar reasons to the backend framework: the interactive benefits are not a priority given the transactional nature of the complaint system.
-Additionally, switching between JavaScript and C# would slow development, as I have less experience with JavaScript, making it harder to efficiently manage the front-end.
+Blazor could provide reusable front-end components and improve the interactivity of the web application. However, given the project timeline and priority on backend functionality, this would introduce unneceessary complexity. Blazor could be considered later for the AI chatbot or if there is changing needs with how staff interacts with customers, where Blazor could create a more dynamic front-end.
 
-Lastly, I cannot guarantee that using a framework would provide a significant performance benefit at this stage of the project.
+I would not use Vue.js because switching between Javascript and C# would slow down development and the interactive benefits are not essential for the system at this stage.
+
 
 ### Consequences
 **Positive**
-* Quickest way to develop which is needed due to time constraints
-* More focus on the backend architecture
-* Does not overcomplicate architecture and keeps it clean
+* Quickest way to develop, allowing focus on backend architecture and core functionality
+* Simplifies integration of modular services
+* Server-rendered pages align well with transactional workflows, ensuring reliablilty and maintainability
 
 **Negative**
-* Less dynamic interactivity
-* Tightly coupled to backend could reduce the flexibility for complex client-side interactions in the future e.g. the ai chatbot
+* Less dynamic interactivity for future features e.g. AI chatbot UI
+* Tightly coupled to backend could reduce the flexibility for highley interactive front-end features
 
 ### References
 https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio
