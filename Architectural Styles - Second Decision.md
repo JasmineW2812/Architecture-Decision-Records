@@ -2,11 +2,11 @@
 
 ## Context and Problem Statement
 I am currently creating a container diagram and want to re-evaluate what architectural style I am using. This is because I have now looked further into non-functional requirements and have a better understanding
-of the system as a whole. The main focus for the project is to be scalable and extensible over the performance value which needs to be efficent but there is less priority on needing immediate responses.
+of the system as a whole. The main focus for the project is to be scalable and extensible over the performance value which needs to be efficient but there is less priority on needing immediate responses.
 
 The current architecture may not be optimal for the system I am creating. As mentioned in chapter 10 of *Fundamentals of Software Architecture* [Richard & Ford, 2020],  a key issue for Layered Architecture is the deployability and testability rating is very low e.g. 3 line code change requires entire deployment unit to be redeployed. This is not feasible for an application that needs to reliably handle communication of complaints between consumers and staff.
 
-The problem is we need to research to see if there is a more suitable option out there with the benefits provided from the layered architecture and the deployability issue given the Complaint Management System will have future implementations of an AI chatbot and is cruical as Many Consumers and Staff will be on the system all times of the da
+The problem is we need to research to see if there is a more suitable option out there with the benefits provided from the layered architecture and the deployability issue given the Complaint Management System will have future implementations of an AI chatbot and is crucial as many Consumers and Staff will be on the system all times of the day.
 
 ## Considered Options
 
