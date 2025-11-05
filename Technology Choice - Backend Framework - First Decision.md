@@ -28,7 +28,8 @@ by default because it is more common to put multiple functionalities within one 
 **Positive**
 * Modular structure
 * Maintains data integrity between layers
-* Faster development due to familiarity using the framework 
+* Faster development due to familiarity using the framework
+  
 **Negative**
 * Fewer framework tutorials and documentation compared to more widely used options
 * Readability could be an issue for future developers unfamiliar with PHP
