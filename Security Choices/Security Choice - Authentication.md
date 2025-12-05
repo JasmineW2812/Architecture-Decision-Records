@@ -23,6 +23,7 @@ OAuth 2.0 was not selected for the proof of concept because it is more complex t
 * Supports multi-tenant systems by including TenantId and roles directly inside token claims.
 * Aligns with OWASP recommendations for reducing Authentication Failures (A07:2025).
 * Compatible with future SSO/OAuth systems if introduced later.
+
 **Negative**
 * Requires secure storage and rotation of signing keys.
 * Slightly more setup than Basic Authentication.
